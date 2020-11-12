@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    text-transform: uppercase;
+    
+}
+    
+    .container{
+        display: grid;
+        color:white;
+        grid-template-columns: repeat(3,auto);
+        grid-template-rows: 300px 600px 200px 200px;
+        grid-template-areas:
+        "head menu menu menu "
+        "hero hero hero hero "
+        "main svojo svojo image"
+        "cont cont cont";
+    }
+        
+        .container{
+            display: grid;
+            color:white;
+            grid-template-columns: repeat(4,1fr);
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+        
+    
+    
+    
+    .container > * {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    
+    }
+    
+    
+    
+    .header{
+        background-color: blueviolet;
+        grid-area: head;
+    }
+    
+    .content{
+        background-color: chartreuse;
+        grid-area: cont;
+    }
+    
+    .sign-up{
+        background-color:yellow;
+        grid-area: sign;
+    }
+    
+    .feature-one{
+        background-color: darkgray;
+        grid-area: feat1;
+    }
+    
+    .feature-two{
+        background-color: darkorange;
+        grid-area: feat2;
+    }
+    
+    .feature-three{
+        background-color: darkviolet;
+        grid-area: feat3;
+    }
+    
+    @media(max-width:550px){
+        .container{
+            grid-template-columns: 1fr;
+            grid-template-areas:
+            "head"
+            "cont"
+            "sign"
+            "feat1"
+            "feat2"
+            "feat3"
+            ;
+    
+            grid-template-rows: 300px 600px 300px 250px 250px 250px;
+        }
+    }
+    
+    
+    @media (max-width: 760px){
+        .container {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 300px 600px 250px 250px;
+            grid-template-areas: 
+            "head head"
+            "cont cont "
+            "sign feat1 "
+            "feat2 feat3";
+    
+        }
+    
+    
+
+
+    
+
+}
+
+.container > * {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.header {
+    background-color: aliceblue;
+    grid-area: head;
+}
+
+.menu {
+    background-color: aquamarine;
+    grid-area: menu;
+
+
+
+}
+.hero {
+    background-color: azure;
+    grid-area: hero;
+}
+
+.main{
+    background-color: chartreuse;
+    grid-area: main;
+}
+
+.banner{
+    background-color:yellow;
+    grid-area: banner;
+}
+
+.extra{
+    background-color: darkgray;
+    grid-area: extra;
+}
+
+.image{
+    background-color: darkorange;
+    grid-area: image;
+}
+
+.svojo{
+    background-color: darkviolet;
+    grid-area: svojo;
+}
+
+@media(max-width:550px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "head"
+        "cont"
+        "sign"
+        "feat1"
+        "feat2"
+        "feat3"
+        ;
+
+        grid-template-rows: 300px 600px 300px 250px 250px 250px;
+    }
+}
+
+
+@media (max-width: 760px){
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 300px 600px 250px 250px;
+        grid-template-areas: 
+        "head head head "
+        "hero hero hero "
+        "menu main main main "
+        "menu banner banner banner  "
+        "menu extra image";
+
+    }
+}
